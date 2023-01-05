@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "List of expandable sections. Select each button to expand the content.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "full-width",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "Select the headings to find out more.",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_setCompletionOn": {
+      "type": "string",
+      "required": false,
+      "default": "allItems",
+      "title": "Set completion on:",
+      "enum": ["inview", "allItems"],
+      "inputType": {
+        "type": "Select",
+        "options": ["inview", "allItems"]
+      },
+      "validators": [],
+      "help": "Whether completion is based on the learner having viewed all the flex items - or just having viewed the component"
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Item Title",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item title",
+            "translatable": true
+          },
+          "body": {
+            "type": "string",
+            "required": true,
+            "inputType": "TextArea",
+            "title": "Item Body",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item body text that is hidden until the item title is clicked on",
+            "translatable": true
+          },
+          "_graphic": {
+            "type": "object",
+            "required": false,
+            "title": "Graphic",
+            "properties": {
+              "src": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Asset:image",
+                "validators": [],
+                "help": "Optional image which will be rendered with the item body text"
+              }
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Classes",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Custom classes that are applied to the flex item."
+          }
+        }
+      }
+    }
+  }
+}

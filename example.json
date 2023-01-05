@@ -1,0 +1,53 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "flex",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Flex",
+  "displayTitle": "Flex Title",
+  "body": "This is optional body text.",
+  "instruction": "Select the headings to find out more.",
+  "_comment": "setCompletionOn = inview | allItems",
+  "_setCompletionOn": "allItems",
+  "_items": [
+    {
+      "title": "Heading 1",
+      "body": "This is display text 1.",
+      "_graphic": {
+        "src": "course/en/images/example.jpg"
+      },
+      "_classes": ""
+    },
+    {
+      "title": "Heading 2",
+      "body": "This is display text 2.",
+      "_graphic": {
+        "src": "course/en/images/example.jpg"
+      },
+      "_classes": ""
+    },
+    {
+      "title": "Heading 3",
+      "body": "This is display text 3.",
+
+      "_graphic": {
+        "src": "course/en/images/example.jpg",
+        "alt": ""
+      },
+      "_classes": ""
+    },
+    {
+      "title": "Heading 4",
+      "body": "This is display text 4..",
+      "_graphic": {
+        "src": "course/en/images/example.jpg"
+      },
+      "_classes": ""
+    }
+  ],
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}
