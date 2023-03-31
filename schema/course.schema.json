@@ -1,5 +1,5 @@
 {
-  "$anchor": "accordion-course",
+  "$anchor": "flex-course",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "$patch": {
@@ -12,16 +12,23 @@
           "type": "object",
           "default": {},
           "properties": {
-            "_accordion": {
+            "_components": {
               "type": "object",
               "default": {},
-              "properties": {
-                "ariaRegion": {
-                  "type": "string",
-                  "title": "ARIA region",
-                  "default": "List of expandable sections. Select each button to expand the content.",
-                  "_adapt": {
-                    "translatable": true
+              "flex": {
+                "_tags": {
+                  "type": "object",
+                  "title": "Tags",
+                  "default": {},
+                  "properties": {
+                    "ariaRegion": {
+                      "type": "string",
+                      "title": "ARIA region",
+                      "default": "List of expandable sections. Select each button to expand the content.",
+                      "_adapt": {
+                        "translatable": true
+                      }
+                    }
                   }
                 }
               }
