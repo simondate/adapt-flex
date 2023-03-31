@@ -1,5 +1,9 @@
 {
   "name": "adapt-flex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nachocinalli/adapt-flex.git"
+  },
   "version": "1.0.0",
   "framework": ">=5.20.1",
   "homepage": "https://github.com/nachocinalli/adapt-flex",
@@ -9,9 +13,6 @@
   "displayName": "Flex",
   "description": "An component that displays clickable titles, which reveal display text",
   "main": "/js/adapt-flex.js",
-  "keywords": [
-    "adapt-plugin",
-    "adapt-component"
-  ],
+  "keywords": ["adapt-plugin", "adapt-component"],
   "license": "GPL-3.0"
 }
