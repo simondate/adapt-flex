@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/nachocinalli/adapt-flex.git"
   },
-  "version": "1.0.0",
+  "version": "1.1.1",
   "framework": ">=5.20.1",
   "homepage": "https://github.com/nachocinalli/adapt-flex",
   "bugs": "https://github.com/nachocinalli/adapt-flex/issues",
