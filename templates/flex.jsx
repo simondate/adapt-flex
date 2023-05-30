@@ -8,7 +8,8 @@ export default function Flex (props) {
   const {
     _id,
     _ariaLevel,
-    onClick
+    onClick,
+    _tabFocused
   } = props;
   const itemAriaLevel = _.isNumber(_ariaLevel) && _ariaLevel !== 0 ? _ariaLevel + 1 : _ariaLevel;
   return (
@@ -38,6 +39,7 @@ export default function Flex (props) {
 
             <div role="heading" aria-level={a11y.ariaLevel({ id: _id, level: 'componentItem', override: _ariaLevel ?? itemAriaLevel })} >
               <button
+                tabindex={_tabFocused ? 0 : -1}
                 id={`${_id}-${index}-flex-button`}
                 className={classes([
                   'flex-item__btn',
@@ -74,9 +76,11 @@ export default function Flex (props) {
               aria-labelledby={`${_id}-${index}-flex-button`}
             >
 
-              <div className="flex-item__content-inner">
+              <div className="flex-item__content-inner" 
+                tabindex={_tabFocused ? '' : 0}
+              >
                 <span className="flex-item__title">
-                  <span className="flex-item__title-inner" aria-hidden="true" dangerouslySetInnerHTML={{ __html: compile(title) }}></span>
+                  <span className="flex-item__title-inner" aria-hidden={_tabFocused ? 'true' : 'false'} dangerouslySetInnerHTML={{ __html: compile(title) }}></span>
                 </span>
                 {body &&
                 <div className="flex-item__body">
